@@ -94,7 +94,26 @@ float calcular_salario_liquido(float salarioMensal, float descontosTotais) {
 }
 
 float calcular_inss(float salarioMensal) {
-    float salarioMinimo = 1212.00; // Salário mínimo de 2025
+    float salarioMinimo = 1518.00; // Salário mínimo de 2025
+    float descontoInss = 0.00;
+    if(salarioMensal < 1518.00){
+        descontoInss =  0.075;
+    } else if(salarioMensal > 1518.00 && salarioMensal <=  2793.88) {
+        descontoInss =  0.09;
+    } else if(salarioMensal > 2793.88 && salarioMensal <=  4190.83) {
+        descontoInss =  0.12;
+    } else if(salarioMensal > 4190.83 && salarioMensal <=  8157.41) {
+        descontoInss =  0.14;
+    } else if(salarioMensal > 8157.41 && salarioMensal <=  13969.49) {
+        descontoInss =  0.145;
+    } else if(salarioMensal > 13969.49 && salarioMensal <=  27938.95) {
+        descontoInss =  0.165;
+    } else if(salarioMensal >  27938.95 && salarioMensal <=  54480.97) {
+        descontoInss =  0.19;
+    } else if(salarioMensal > 54480.97) {
+        descontoInss =  0.22;
+    }
+    
     float descontoInss = salarioMensal * 0.075; // 7,5% sobre o salário mensal
     float maxInss = 951.63; // Desconto máximo
 
