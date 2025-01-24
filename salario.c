@@ -114,7 +114,7 @@ float calcular_inss(float salarioMensal) {
         descontoInss =  0.22;
     }
     
-    float descontoInss = salarioMensal * 0.075; // 7,5% sobre o salário mensal
+    float descontoInss = salarioMensal * descontoInss; // 7,5% sobre o salário mensal
     float maxInss = 951.63; // Desconto máximo
 
     // Se o salário for menor ou igual ao salário mínimo, aplica 7,5% do salário
